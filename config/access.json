@@ -1,0 +1,47 @@
+{
+    "_comment": [
+        "1 stands for Super admin",
+        "2 stands for admin",
+        "3 stands for user",
+        "4 stands for student"
+    ],
+    
+    "_comment_user_routes": ["User routes starts here"],
+    "/users/": {
+        "1": ["GET", "POST", "PUT", "DELETE"],
+        "2": ["GET", "POST", "PUT", "DELETE"],
+        "3": ["GET", "POST", "PUT", "DELETE"]
+    },
+    "/users/:id": {
+        "1": ["GET", "POST", "PUT", "DELETE"],
+        "2": ["GET", "POST", "PUT", "DELETE"],
+        "3": ["GET", "POST", "PUT", "DELETE"]
+    },
+    "/users/hard-delete/:id": {
+        "1": ["DELETE"]
+    },
+
+    "_comment_roles_routes": ["Roles routes starts here"],
+    "/roles/": {
+        "1": ["GET", "POST", "PUT", "DELETE"]
+    },
+    "/roles/:id": {
+        "1": ["GET", "POST", "PUT", "DELETE"]
+    },
+    "/roles/hard-delete/:id": {
+        "1": ["DELETE"]
+    },
+
+    "_comment_courses_routes": ["Courses routes starts here"],
+    "/courses/": {
+        "1": ["GET", "POST", "PUT", "DELETE"],
+        "2": ["GET", "POST", "PUT", "DELETE"]
+    },
+    "/courses/:id": {
+        "1": ["GET", "POST", "PUT", "DELETE"],
+        "2": ["GET", "POST", "PUT", "DELETE"]
+    },
+    "/courses/hard-delete/:id": {
+        "1": ["DELETE"]
+    }
+}
