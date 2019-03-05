@@ -4,18 +4,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 var cors = require('cors')
-
-const indexRouter = require('./routes/index');
-const authRouter = require('./routes/auth');
-const rolesRouter = require('./routes/role');
-const usersRouter = require('./routes/user');
-
-/* courses routes requiring starts here */
-const courseTypesRouter = require('./routes/course_type');
-
-const coursesRouter = require('./routes/course');
-/* courses routes requiring ends here */
-
 const app = express();
 
 // view engine setup
@@ -29,17 +17,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
-app.use('/', indexRouter);
-app.use('/auth', authRouter);
-app.use('/roles', rolesRouter);
-app.use('/users', usersRouter);
-
-/* courses routes starts here */
-app.use('/courseTypes', courseTypesRouter);
-
-app.use('/courses', coursesRouter);
-/* courses routes ends here */
-
+// Routes
+app.use('/', require('./routes'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
